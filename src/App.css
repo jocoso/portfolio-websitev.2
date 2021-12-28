@@ -4,15 +4,27 @@ body{
   font-family: 'Press Start 2P', cursive;
 }
 
+/* Utilities */
+
+.classy-line {
+  border: 0;
+  height: 55px;
+  background-image: url('https://www.formget.com/wp-content/webp-express/webp-images/doc-root/wp-content/uploads/2014/12/type_9.png.webp');
+  background-repeat: no-repeat;
+  text-align: center;
+  margin-top: 0px;
+  padding-top: 0px;
+}
+
+/* ROOT */
+
 .outer {
   display: grid;
   width: 80%;
-  height: 100% !important;
+  height: 70%;
   grid-template-columns: 30% auto;
-  grid-template-rows: 10% auto;
   background-color: rgb(255, 255, 255);
   margin:auto;
-  z-index: 0;
   border: 5px solid #BCFD4C;
 }
 
@@ -31,23 +43,76 @@ body{
   font-size: 23px;
 }
 
-
-hr {
-  border: 0;
-  height: 55px;
-  background-image: url('https://www.formget.com/wp-content/webp-express/webp-images/doc-root/wp-content/uploads/2014/12/type_9.png.webp');
-  background-repeat: no-repeat;
-  text-align: center;
-  margin-top: 0px;
-
-  padding-top: 0px;
-}
-
 #char-rec img {
-  width: 90%;
-  margin-top: 50%;
-  margin-bottom: 50%;
+  width: 100%;
+  height: auto;
+  vertical-align: middle;
 }
+
+
+/* Front Page */
+
+#content {
+  display:inline-block;
+  padding: 1.5vw 1.5vw 1.5vw 1.5vw;
+  width: 80%;
+  margin: 4%;
+  min-height: 70%;
+  border: 5px solid #6E6E6E;
+  background-color: rgba(45, 45, 45, 0.5);
+  color: white;
+  border-radius: 4px;
+  box-shadow: 0px 10px 10px 0px #6E6E6E;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+
+/* About Me */
+
+#about-me {
+  font-size: 1.5vw;
+}
+
+#about-me .title {
+  font-size: 2vw;
+}
+
+.wrapper {
+  display: block;
+  width: 100%;
+  transform: translateY(0%);
+  text-align: center;
+}
+
+.wrapper .left img {
+  width: 50%;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 1.5vw;
+}
+
+.wrapper .right img {
+  width: 50%;
+  display: block;
+  margin-bottom: 1.5vw;
+}
+
+.wrapper .right .title {
+  font-size: 1vw;
+  display: block;
+  padding: 0.9vw;
+}
+
+.wrapper .right .info {
+  font-size: 1.4vw;
+  display: block;
+  margin: 1vw 0 1vw 0;
+}
+
+
+
 
 #tab-bar {
   text-align: center;
@@ -61,47 +126,10 @@ hr {
   font-family: 'Press Start 2P', cursive;
 }
 
-#content {
-  display:inline-block;
-  padding: 5px 20px 5px 20px;
-  margin-left: auto;
-  margin-right: auto;
-  justify-content: center;
-  margin-top: 5%;
-  width: 80%;
-  height: auto;
-  min-height: 70%;
-  border: 5px solid #6E6E6E;
-  background-color: rgba(45, 45, 45, 0.5);
-  color: white;
-  border-radius: 4px;
-  box-shadow: 0px 10px 10px 0px #6E6E6E;
-  overflow-y: auto;
-  overflow-x: hidden;
-}
+
 
 @media screen and (max-width: 900px) {
-  .outer {
-    height: 50%;
-    margin-top: 5%;
-    padding-bottom: 90%;
-  }
-
-
-
-  .collider-container {
-    width: 15% !important;
-  }
-
-  #char-rec h1 {
-    font-size: 10px;
-  }
-}
-.content {
-  padding: 0 18px;
-  background-color: #f1f1f1;
-  height: 50%;
-
+  
 }
 
 .collider-container {
@@ -146,40 +174,6 @@ hr {
   text-align: center;
 }
 
-.wrapper {
-  display: inline-block;
-  width: 100%;
-  transform: translateY(0%);
-}
-
-.left {
-  display: block;
-  width: 25%;
-  float: left;
-  border: 10px solid;
-  border-image: url('https://www.formget.com/wp-content/webp-express/webp-images/doc-root/wp-content/uploads/2014/12/type_9.png.webp');
-}
-
-.left img {
-  width: 100%;
-}
-
-.right {
-  height: inherit;
-  width: 60%;
-  float: right;
-}
-
-.right p, h4, h6 {
-  height: 100%;
-  vertical-align: middle;
-}
-
-.wrapper .right {
-  display: block;
-  width: 70%;
-  height: auto;
-}
 
 #skill-displayer {
   text-align: left;

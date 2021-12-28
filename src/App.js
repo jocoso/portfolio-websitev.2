@@ -9,7 +9,7 @@ function App() {
     <div className="outer">
       <div id="char-rec">
         <h1>Joshua Collado</h1>
-        <hr />
+        <hr className="classy-line" />
         <img src={img} />
       </div>
       <MenuWindow />
