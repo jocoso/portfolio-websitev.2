@@ -1,7 +1,7 @@
 import MenuWindow from "./components/menuWindow";
 import './App.css';
 
-import img from "./images/post.gif"
+import img from "./images/joshpixel.gif"
 
 
 function App() {
