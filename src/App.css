@@ -8,39 +8,48 @@ body{
 
 .classy-line {
   border: 0;
-  height: 55px;
+  height: 20px;
   background-image: url('https://www.formget.com/wp-content/webp-express/webp-images/doc-root/wp-content/uploads/2014/12/type_9.png.webp');
   background-repeat: no-repeat;
   text-align: center;
-  margin-top: 0px;
-  padding-top: 0px;
 }
 
 /* ROOT */
 
-.outer {
+#outer {
   display: grid;
-  width: 80%;
-  height: 70%;
-  grid-template-columns: 30% auto;
+  width: 85%;
+  height:auto;
   background-color: rgb(255, 255, 255);
-  margin:auto;
   border: 5px solid #BCFD4C;
+  border-radius: 10px 10px 10px 10px;
+  padding: 20px;
+
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  grid-template-columns: 30% auto;
+  grid-template-rows: 20% auto;
+  align-content: stretch;
+  justify-content: space-between;
+  align-items: center;
+  justify-items: start;
 }
 
 #char-rec {
   grid-row: 1 / end;
   display:inline-block;
   width: 70%;
-  padding-top: 10px;
-  padding: 5px;
+  padding: 20px;
   border-right: 5px solid #BCFD4C;
 }
 
-#char-rec h1 {
+#char-rec .title {
   text-align: center;
   margin-bottom: 5px;
-  font-size: 23px;
+  font-size: 2.5vw;
 }
 
 #char-rec img {
@@ -50,14 +59,32 @@ body{
 }
 
 
+/* Content Screen */
+
+.second-screen {
+  grid-column: 2 / end;
+  grid-row: 1 / end;
+  display: grid;
+  grid-template-rows: 10% auto;
+  text-align: center;
+  margin: auto;
+}
+
+.first-screen {
+  grid-column: 1 / 2;
+  grid-row: 1 / end;
+  margin:auto;
+}
+
 /* Front Page */
 
 #content {
-  display:inline-block;
   padding: 1.5vw 1.5vw 1.5vw 1.5vw;
-  width: 80%;
-  margin: 4%;
-  min-height: 70%;
+  
+  width: 85%;
+  max-height: 70vh;
+  overflow-y: scroll;
+  min-height: 70vh;
   border: 5px solid #6E6E6E;
   background-color: rgba(45, 45, 45, 0.5);
   color: white;
@@ -67,6 +94,40 @@ body{
   overflow-x: hidden;
 }
 
+.second-screen #content {
+  grid-row: 2/end;
+}
+
+/* Navigation Bar */
+
+#tab-bar {
+  height: fit-content;
+  text-align: center;
+}
+
+#tab-bar button {
+  box-shadow: 0 9px #999;
+  border: 2px solid #BCFD4C;
+  display:inline-block;
+  font-size: 1.13vw;
+  margin: 0 0.1vw 0 0.1vw;
+  padding: 5px;
+  border-radius: 5px 0px 5px 0px;
+  cursor: pointer;
+  font-family: 'Press Start 2P', cursive;
+  text-align: center;
+  outline: none;
+}
+
+#tab-bar button:active {
+  background-color: #BCFD4C;
+  border: 2px solid #6E6E6E;
+  box-shadow: 0 5px #666;
+}
+
+.second-screen #tab-bar {
+  grid-row: start / 1;
+}
 
 /* About Me */
 
@@ -81,16 +142,28 @@ body{
 .wrapper {
   display: block;
   width: 100%;
-  transform: translateY(0%);
+  height: 100%;
   text-align: center;
+  background-color: red;
+}
+
+.wrapper .left {
+  width: 50%;
+  float: left;
+}
+.wrapper .right {
+  width: 50%;
+  height: 100%;
+  float: right;
+  vertical-align: middle;
 }
 
 .wrapper .left img {
-  width: 50%;
   display: block;
   margin-left: auto;
   margin-right: auto;
   margin-bottom: 1.5vw;
+  width: 70%;
 }
 
 .wrapper .right img {
@@ -99,31 +172,16 @@ body{
   margin-bottom: 1.5vw;
 }
 
-.wrapper .right .title {
+.wrapper .right .titl {
   font-size: 1vw;
+  padding-bottom: 10px;
   display: block;
-  padding: 0.9vw;
 }
 
 .wrapper .right .info {
-  font-size: 1.4vw;
-  display: block;
+  font-size: 1vw;
   margin: 1vw 0 1vw 0;
-}
-
-
-
-
-#tab-bar {
-  text-align: center;
-}
-
-#tab-bar button {
-  border: 2px solid #BCFD4C;
-  padding: 7px;
-  border-radius: 5px 0px 5px 0px;
-  cursor: pointer;
-  font-family: 'Press Start 2P', cursive;
+  vertical-align: middle;
 }
 
 
@@ -165,14 +223,7 @@ body{
   margin: 30px 10px 0px 10px;
 }
 
-#second-screen {
-  grid-row: 1 / end;
-  grid-column: 2 / end;
-  width: 100%;
-  margin: 0;
-  padding: 0;
-  text-align: center;
-}
+
 
 
 #skill-displayer {
