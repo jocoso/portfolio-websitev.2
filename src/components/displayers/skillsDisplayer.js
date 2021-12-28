@@ -1,18 +1,61 @@
 import React from 'react';
 import LifeBar from '../lifeBar';
+import "../../App.css";
 
-export default function SkillsDisplayer(props) {
-    return(<div>
-        <ul style={{position:"relative", left: "10vw", top: "5vh"}}>
-            <li>
-                <LifeBar name="C++" size="20" />
-            </li>
-            <li>
-                <LifeBar name="JS" size="20" />
-            </li>
-            <li>
-                <LifeBar name="React" size="20" />
-            </li>
-        </ul>
-    </div>);
+class SkillsDisplayer extends React.Component {
+    constructor(props) {
+        super(props)
+
+        this.state = {
+            skills: [
+                {
+                    title: "Programming Skills",
+                    contents: [
+                        {name: "C++", size: "10"},
+                        {name: "JS", size: "10"},
+                        {name: "React", size: "10"}
+                    ]
+                },
+                {
+                    title: "Robotic Skills",
+                    contents: [
+                        {name: "Arduino", size: "10"},
+                        {name: "Raspberry PI", size: "5"}
+                    ]
+                },
+                {
+                    title: "People Skills",
+                    contents: [
+                        {name: "Spanish", size: "10"},
+                        {name: "English", size: "10"},
+                        {name: "Teaching", size: "10"}
+                    ]
+                }
+            ]
+        }
+    }
+
+    render() {
+        return(<div>
+            <div id="skill-displayer">
+                <h1 className="title"> Skills </h1>
+                <hr />
+                { this.state.skills.map( (skill) => {
+                return <div>
+                    <p>{skill.title}</p>
+                    <ul className="list-style-type-none">
+                        {skill.contents.map(content => {
+                            return <li>
+                                <LifeBar name={content.name} size={content.size} />
+                            </li>
+                        })}
+                    </ul>
+                </div>
+                })}
+            </div>
+        </div>
+        );
+    }
 }
+
+export default SkillsDisplayer;

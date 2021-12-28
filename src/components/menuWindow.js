@@ -1,9 +1,9 @@
 import React from 'react';
 
 import TabBar from '../components/tabBar';
+import "../App.css";
 
 // Displayers
-import Displayer from '../components/displayer';
 import AboutMeDisplayer from "../components/displayers/aboutMeDisplayer";
 import SkillsDisplayer from "../components/displayers/skillsDisplayer";
 import ProjectsDisplayer from "../components/displayers/projectsDisplayer";
@@ -68,9 +68,12 @@ class MenuWindow extends React.Component {
     }
 
     render() {
-        return( <div>
-            <TabBar data={this.state.tabs} onClose={this.onClose} />
-            <div>
+        return( 
+        <div id="second-screen">
+            <div id="tab-bar">
+                <TabBar data={this.state.tabs} onClose={this.onClose} />
+            </div>  
+            <div id="content">
                 {this.state.tabs[this.state.currentDisplay].display()}
             </div>
         </div> );

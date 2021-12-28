@@ -11,6 +11,6 @@ export default function LifeBar(props) {
         return stars;
     }
     return <div>
-        <div>{props.name}: {stars()}</div>
+        <div>{props.name}: {stars() + ' ' + '(' + props.size + ')'}</div>
     </div>
 }
