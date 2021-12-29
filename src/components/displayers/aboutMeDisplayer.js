@@ -9,11 +9,11 @@ export default function AboutMeDisplayer(props) {
             <hr className="classy-line" />
             <div>
                 <div className="wrapper">
+                    <span className="title">Joshua Collado</span>
                     <div className="left">
                         <img src={pixelPortrait} />
                     </div>
                     <div className="right">
-                        <span className="titl">Joshua Collado</span>
                         <span className="info">A recent graduate from Lehman College who Loves programming,
                 writing, drawing and designing games on his free time.</span>
                     </div>

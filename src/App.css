@@ -9,8 +9,9 @@ body{
 .classy-line {
   border: 0;
   height: 20px;
+  width: 100%;
   background-image: url('https://www.formget.com/wp-content/webp-express/webp-images/doc-root/wp-content/uploads/2014/12/type_9.png.webp');
-  background-repeat: no-repeat;
+  background-repeat: repeat-x;
   text-align: center;
 }
 
@@ -142,46 +143,36 @@ body{
 .wrapper {
   display: block;
   width: 100%;
-  height: 100%;
+  min-height: fit-content;
   text-align: center;
-  background-color: red;
 }
 
-.wrapper .left {
-  width: 50%;
-  float: left;
+.wrapper > .title {
+  font-size: 1.5vw !important;
+  padding-bottom: 10px;
+  display: block;
+  text-align: left;
 }
-.wrapper .right {
-  width: 50%;
-  height: 100%;
-  float: right;
-  vertical-align: middle;
+
+
+.wrapper .left {
+  width: 40%;
+  float: left;
 }
 
 .wrapper .left img {
   display: block;
-  margin-left: auto;
-  margin-right: auto;
-  margin-bottom: 1.5vw;
-  width: 70%;
+  width: 100%;
+  margin-right: 0%;
 }
 
-.wrapper .right img {
-  width: 50%;
-  display: block;
-  margin-bottom: 1.5vw;
-}
-
-.wrapper .right .titl {
-  font-size: 1vw;
-  padding-bottom: 10px;
-  display: block;
+.wrapper .right {
+  min-height: 30vw;
 }
 
 .wrapper .right .info {
-  font-size: 1vw;
-  margin: 1vw 0 1vw 0;
-  vertical-align: middle;
+  font-size: 1.2vw;
+  vertical-align: left;
 }
 
 
