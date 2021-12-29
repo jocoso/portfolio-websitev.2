@@ -9,17 +9,17 @@ class ExperienceDisplayer extends React.Component {
             experiences: [
                 {
                     id: 0,
-                    title: "Education",
+                    title: 'Education',
                     inners: [
                         {
-                            id: "ed-lem",
-                            title: "Lehman College",
-                            content: "BS. Computer science"
+                            id: 'ed-lem',
+                            title: 'Lehman College',
+                            content: 'BS. Computer science'
                         },
                         {
-                            id: "ed-colum",
-                            title: "Columbia",
-                            content: "Master in Computer Science"
+                            id: 'ed-colum',
+                            title: 'Columbia',
+                            content: 'Master in Computer Science'
                         }
                     ],
                 }

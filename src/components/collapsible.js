@@ -1,6 +1,6 @@
 import React from 'react';
-import classNames from "classnames";
-import "../App.css";
+import classNames from 'classnames';
+import '../App.css';
 
 class Collapsible extends React.Component {
     constructor(props) {
@@ -19,19 +19,19 @@ class Collapsible extends React.Component {
 
     render() {
         return(
-            <div style={{display: "inline-block", alignItems:"center", width: "70%"}}>
-                <button onClick={this.collapseToggle} className="collapsible" key={this.props.data.id}
+            <div style={{display: 'inline-block', alignItems:'center', width: '70%'}}>
+                <button onClick={this.collapseToggle} className='collapsible' key={this.props.data.id}
                 style={{
-                    backgroundColor: "#eee",
-                    color: "#444",
-                    width: "100%",
-                    cursor: "pointer",
-                    padding: "18px",
-                    borderRadius: "8px",
-                    border: "none",
-                    textAlign: "center",
-                    outline: "none",
-                    fontSize: "15px",
+                    backgroundColor: '#eee',
+                    color: '#444',
+                    width: '100%',
+                    cursor: 'pointer',
+                    padding: '18px',
+                    borderRadius: '8px',
+                    border: 'none',
+                    textAlign: 'center',
+                    outline: 'none',
+                    fontSize: '15px',
                 }}> {this.props.data.title} </button>
                     <div className={classNames({
                         displayNone: !this.state.show,

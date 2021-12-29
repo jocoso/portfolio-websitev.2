@@ -1,12 +1,12 @@
 import React from 'react';
 
 import TabBar from '../components/tabBar';
-import "../App.css";
+import '../App.css';
 
 // Displayers
-import AboutMeDisplayer from "../components/displayers/aboutMeDisplayer";
-import SkillsDisplayer from "../components/displayers/skillsDisplayer";
-import ProjectsDisplayer from "../components/displayers/projectsDisplayer";
+import AboutMeDisplayer from '../components/displayers/aboutMeDisplayer';
+import SkillsDisplayer from '../components/displayers/skillsDisplayer';
+import ProjectsDisplayer from '../components/displayers/projectsDisplayer';
 import ContactMeDisplayer from './displayers/contactMeDisplayer';
 import ExperienceDisplayer from './displayers/experienceDisplayer';
 
@@ -19,31 +19,31 @@ class MenuWindow extends React.Component {
             tabs: [
                 {
                     id: 0,
-                    title: "About Me",
+                    title: 'About Me',
                     component: <AboutMeDisplayer />,
                     display: () => this.setDisplayer(0)
                 },
                 {
                     id: 1,
-                    title: "Skills",
+                    title: 'Skills',
                     component: <SkillsDisplayer />,
                     display: () => this.setDisplayer(1),
                 },
                 {
                     id: 2,
-                    title: "Projects",
+                    title: 'Projects',
                     component: <ProjectsDisplayer />,
                     display: () => this.setDisplayer(2),
                 },
                 {
                     id: 3,
-                    title: "Experience",
+                    title: 'Experience',
                     component: <ExperienceDisplayer />,
                     display: () => this.setDisplayer(3),
                 },
                 {
                     id: 4,
-                    title: "Contact Me",
+                    title: 'Contact Me',
                     component: <ContactMeDisplayer />,
                     display: () => this.setDisplayer(4),
                 }
@@ -69,11 +69,11 @@ class MenuWindow extends React.Component {
 
     render() {
         return( 
-        <div id="second-screen">
-            <div id="tab-bar">
+        <div className="second-screen">
+            <div id='tab-bar'>
                 <TabBar data={this.state.tabs} onClose={this.onClose} />
             </div>  
-            <div id="content">
+            <div id='content' style={{ resize: 'none'}}>
                 {this.state.tabs[this.state.currentDisplay].display()}
             </div>
         </div> );

@@ -18,19 +18,19 @@ class InnerCollapsible extends React.Component {
 
     render() {
         return(
-            <div className="collider-container">
-                <button onClick={this.collapseToggle} className="collapsible" key={this.props.data.id}
+            <div className='collider-container'>
+                <button onClick={this.collapseToggle} className='collapsible' key={this.props.data.id}
                 style={{
-                    backgroundColor: "#eee",
-                    color: "#444",
-                    width: "100%",
-                    cursor: "pointer",
-                    padding: "18px",
-                    borderRadius: "8px",
-                    border: "none",
-                    textAlign: "center",
-                    outline: "none",
-                    fontSize: "15px",
+                    backgroundColor: '#eee',
+                    color: '#444',
+                    width: '100%',
+                    cursor: 'pointer',
+                    padding: '18px',
+                    borderRadius: '8px',
+                    border: 'none',
+                    textAlign: 'center',
+                    outline: 'none',
+                    fontSize: '15px',
                 }}> {this.props.data.title} </button>
                     <span className={classNames({
                         displayNone: !this.state.show,
