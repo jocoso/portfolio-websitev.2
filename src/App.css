@@ -93,10 +93,11 @@ body{
 
 #content {
   padding: 1.5vw 1.5vw 1.5vw 1.5vw;
-  width: 100%;
+  width: 50em;
   max-width: 85%;
   min-height: 70vh;
   max-height: 70vh;
+  resize: none !important;
   overflow-y: scroll;
   border: 5px solid #6E6E6E;
   background-color: rgba(45, 45, 45, 0.5);
@@ -153,23 +154,20 @@ body{
 /* About Me */
 
 #about-me {
-  font-size: 1.5vw;
-  width: 90%;
+  width: 100%;
 }
 
 .wrapper {
   text-align: center;
-  width: auto;
-  max-width: 80%;
-  margin-left: auto;
-  margin-right: auto;
-  min-height: fit-content;
+  width: 100%;
+  margin: 0;
+  padding: 0;
   display: block;
 
 }
 
 .wrapper > .title {
-  font-size: 1.5vw !important;
+  font-size: 1.5vw;
   padding-bottom: 10px;
   display: block;
   text-align: left;
@@ -177,7 +175,7 @@ body{
 
 
 .wrapper .left {
-  width: 40%;
+  width: 30%;
   float: left;
 }
 
@@ -187,13 +185,20 @@ body{
 }
 
 .wrapper .right {
-  line-height: 1em;
-  font-size: 0.3vw;
-  height: 2em;
-  width: 20%;
+  height: 100%;
+  width: 70%;
   overflow: hidden;
-  margin-bottom: 1em;
-  float: right;
+  font-size: 1vw;
+  text-overflow: ellipsis;
+  white-space:pre-line;
+  float: right
+}
+
+.wrapper .right p {
+  margin-block-start: 1em;
+  margin-block-end: 1em;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
 }
 
 
