@@ -1,21 +1,17 @@
 import React from 'react';
-import blop from '../images/blop.png';
+import yes from '../images/blop.png';
+import no from '../images/nope.png';
 
+// Given a list of options, displays a life bar.
 export default function LifeBar(props) {
-    
-    let stars = [];
-    
-    for(let i = 0; i < props.size; i++) {
-        stars[i] = <img src={blop} width="40" height="40" />;
-    }
-
 
     return <div>
-        <div>
+        <div className="skill-item">
             {props.name}: 
-            {stars}
+            {props.data.levels.map(level => {
+                const image = (level.check) ? yes : no;
+                return <img src={image} width="40" height="40" title={level.info} />
+            })}
         </div>
-        {/* {stars() + ' ' + '(' + props.size + ')'} */}
-    
     </div>
 }
