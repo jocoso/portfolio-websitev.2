@@ -46,7 +46,7 @@ class SkillsDisplayer extends React.Component {
                             levels: [
                                 {info:'Familiar: Understand the language and can make things work.', check: true},
                                 {info:'Proficient: Have good understanding of the language and requires little research.', check: true},
-                                {info:'Excellent: Can code using no references. Uses documentation when needing help.', check: false},
+                                {info:'Excellent: Can code using no references. Uses documentation when needing help.', check: true},
                                 {info:'Expert: Understand the ins and outs of the language.', check: false},
                                 {info:'Professional: Have +1 years of laboral experience using the language', check: false}
                             ]

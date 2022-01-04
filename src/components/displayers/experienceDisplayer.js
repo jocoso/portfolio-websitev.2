@@ -29,7 +29,7 @@ class ExperienceDisplayer extends React.Component {
                     inners: [
                         {
                             id: 'wk-leaspec',
-                            title: 'Learning Specialist',
+                            title: 'Learning Specialist Science Teacher (Valence College Prep)',
                             content: <ul>
                                 <li>Communicate and interact with parents on student's academic progress</li>
                                 <li>Adhere to and comply with all the school rules and guidelines</li>
@@ -38,9 +38,32 @@ class ExperienceDisplayer extends React.Component {
                             </ul>
                         },
                         {
-                            id: 'ed-colum',
-                            title: 'Columbia',
-                            content: '(Applied) Master in Computer Science'
+                            id: 'wk-sfeng',
+                            title: 'Software Engineer (DoSomething)',
+                            content: <ul>
+                                <li>Helped implement component schemas using GraphQL and Contentful</li>
+                                <li>Created a template focused on displaying company-related information using React and SASS</li>
+                                <li>Write React code to facilitate communication between GraphQL and the main page, Phoenix-next</li>
+                                <li>Test software development methodology in an agile environment</li>
+                            </ul>
+                        },
+                        {
+                            id: 'wk-ttp',
+                            title: 'Teacher Assistant (Lehman College Math Lab)',
+                            content: <ul>
+                                <li>Worked with a variety of students solving computer programming problems</li>
+                                <li>Assigned students custom-made challenges they could do on their own</li>
+                                <li>Provided specialized support for students with disabilities</li>
+                            </ul>
+                        },
+                        {
+                            id: 'wk-doe',
+                            title: 'Technology Support Intern (DOE)',
+                            content: <ul>
+                                <li>Organized and kept an inventory of all school equipment and maintaned electronic devices</li>
+                                <li>Assisted teachers regarding their laptops, computers, and printers</li>
+                                <li>I Contacted with DOE IT main desk consistently to troubleshoot the school's issues</li>
+                            </ul>
                         }
                     ],
                 }
@@ -50,6 +73,9 @@ class ExperienceDisplayer extends React.Component {
 
     render() {
         return(<div>
+            <h1 className="title">Experience</h1>
+            <hr className="classy-line"/>
+
             {this.state.experiences.map(
                 (experience) => {
                     return <InnerCollapsible data={experience} />
