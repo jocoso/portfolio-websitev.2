@@ -27,8 +27,26 @@ body{
   text-align: center;
 }
 
+.subtitle {
+  color: black;
+  font-size: 1.5vw;
+}
+
 .list-style-type-none {
   list-style-type: none;
+}
+
+.game-button {
+  box-shadow: 0 9px rgb(66, 66, 66);
+  border: 2px solid #BCFD4C;
+  border-radius: 10px;
+}
+
+.game-button:active {
+  background-color: #BCFD4C;
+  border: 2px solid #6E6E6E;
+  box-shadow: 0 5px rgb(66, 66, 66);
+  transform: translateY(4px);
 }
 
 /* ROOT */
@@ -97,7 +115,7 @@ body{
 
 #content {
   padding: 1.5vw 1.5vw 1.5vw 1.5vw;
-  width: 50em;
+  width: 50vw;
   max-width: 85%;
   min-height: 70vh;
   max-height: 70vh;
@@ -131,13 +149,12 @@ body{
 #tab-bar button {
   box-shadow: 0 9px #999;
   border: 2px solid #BCFD4C;
-  display:inline-block;
+  display: inline-block;
   font-size: 1.13vw;
   margin: 0 0.1vw 0 0.1vw;
   padding: 5px;
   border-radius: 5px 0px 5px 0px;
   cursor: pointer;
-  font-family: 'Press Start 2P', cursive;
   text-align: center;
   outline: none;
 }
@@ -217,6 +234,11 @@ body{
 .skill-category {
   padding: 5px;
   margin: 10px;
+  font-size: 1.2vw;
+}
+
+.skill-category .title {
+  text-align: left;
 }
 
 .skill-item {
@@ -242,6 +264,71 @@ body{
   background: rgba(0,0,0,0.5);
 }
 
+
+
+/* Projects */
+
+#projects-displayer {
+  text-align: center;
+}
+
+#projects-displayer button {
+  height: auto;
+  width: auto;
+}
+
+#projects-displayer button img {
+  height: 70%;
+  width: 70%;
+  margin: 0;
+}
+
+.portfolio {
+  margin: 0em;
+  padding: 1em;
+  height: auto;
+  vertical-align: top;
+ 
+}
+
+.portfolio button {
+  margin: 0px 10px 10px 0px;
+  max-height: 130px;
+  max-width: 130px;
+  min-height: 130px;
+  min-width: 130px;
+  vertical-align: top;
+  
+}
+
+/* Modal */
+
+.modal-back {
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: scroll;
+  background-color: rgba(0, 0, 0, 0.4);
+} 
+
+.modal-front {
+  background-color: #fefefe;
+  margin: 5% auto;
+  padding: 10px;
+  border: 1px solid #888;
+  width: 80%;
+  height: 80%;
+  overflow: scroll;
+  text-align: center;
+  color: black;
+}
+
+.modal-front img {
+  width: 100%;
+}
 
 @media screen and (max-width: 900px) {
   
@@ -270,14 +357,6 @@ body{
   max-width: 90%;
   position: relative;
   left: 10%;
-}
-
-#projects-displayer {
-  text-align: center;
-}
-
-#projects-displayer button {
-  margin: 30px 10px 0px 10px;
 }
 
 

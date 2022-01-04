@@ -59,13 +59,15 @@ class ProjectsDisplayer extends React.Component {
     render() {
         return(<div id='projects-displayer'>
             <h1 className='title'>My Projects</h1>
-            <hr />
+            <hr className='classy-line'/>
+
+            <div className='portfolio'>
             {this.state.projects.map(
                 (project) => {
-                    return <button onClick={ () => this.showTrue(project.id) }><ContentImage data={project} /></button>
+                    return <button className='game-button' onClick={ () => this.showTrue(project.id) }><ContentImage data={project} /></button>
                 }
             )}
-            
+            </div>
 
             {this.state.showModal?this.state.showModal:''}
 

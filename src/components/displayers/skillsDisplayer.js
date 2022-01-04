@@ -129,7 +129,7 @@ class SkillsDisplayer extends React.Component {
                 <hr className='classy-line' />
                 { this.state.skills.map( (skill) => {
                 return <div className="skill-category">
-                    <p>{skill.title}</p>
+                    <p className="subtitle">{skill.title}</p>
                     <ul className='list-style-type-none'>
                         {skill.contents.map(content => {
                             return <li>
