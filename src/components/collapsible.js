@@ -19,25 +19,18 @@ class Collapsible extends React.Component {
 
     render() {
         return(
-            <div style={{display: 'inline-block', alignItems:'center', width: '70%'}}>
-                <button onClick={this.collapseToggle} className='collapsible' key={this.props.data.id}
-                style={{
-                    backgroundColor: '#eee',
-                    color: '#444',
-                    width: '100%',
-                    cursor: 'pointer',
-                    padding: '18px',
-                    borderRadius: '8px',
-                    border: 'none',
-                    textAlign: 'center',
-                    outline: 'none',
-                    fontSize: '15px',
-                }}> {this.props.data.title} </button>
+            <div className="collapsible-container">
+                <button onClick={this.collapseToggle} 
+                    className='collapsible-root game-button' 
+                    key={this.props.data.id}
+                > 
+                    {this.props.data.title} </button>
                     <div className={classNames({
                         displayNone: !this.state.show,
                         displayContent: this.state.show,
+                        collapsibleInner: true,
                     })}>
-                        <p>{this.props.data.content}</p>
+                        <div className="collapsible-content">{this.props.data.content}</div>
                     </div>
             </div>
         );
