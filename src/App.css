@@ -338,7 +338,10 @@ body{
 .collapsible-root {
   width: 100%;
   padding: 10px;
+  display: block;
+  margin-top: 10px;
 }
+
 
 .collapsible-container {
   width: auto;
@@ -358,16 +361,38 @@ body{
 }
 
 .collapsible-content {
-  text-align: center;
+  text-align: left;
   margin: 15px 0 15px auto;
+  font-size: 10px;
+}
+
+.collapsible-content div {
+  margin: 10px;
+}
+
+.collapsible-content ul li {
+  margin: 10px;
 }
 
 .displayNone {
   display: none;
+  
 }
 
 .displayContent {
   width: 100%;
-
 }
 
+.arrowRight {
+  background-image: url("https://iconvulture.com/wp-content/uploads/2017/12/angle-arrow-pointing-to-right.png");
+  background-size: 20px 20px;
+  background-repeat: no-repeat;
+  background-position: left;
+}
+
+.arrowDown {
+  background-image: url("https://www.iconpacks.net/icons/2/free-arrow-down-icon-3101-thumb.png");
+  background-size: 20px 20px;
+  background-repeat: no-repeat;
+  background-position: left;
+}

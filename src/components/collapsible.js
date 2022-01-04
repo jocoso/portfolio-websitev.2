@@ -18,10 +18,15 @@ class Collapsible extends React.Component {
     }
 
     render() {
+        let rootClass = 'collapsible-root game-button ';
+        rootClass += classNames({
+            arrowRight: !this.state.show,
+            arrowDown: this.state.show,
+        });
         return(
             <div className="collapsible-container">
                 <button onClick={this.collapseToggle} 
-                    className='collapsible-root game-button' 
+                    className={rootClass} 
                     key={this.props.data.id}
                 > 
                     {this.props.data.title} </button>
