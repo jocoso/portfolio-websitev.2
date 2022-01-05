@@ -1,5 +1,5 @@
 import React from 'react';
-import validator from 'validator';
+import axios from 'axios';
 
 class ContactMeDisplayer extends React.Component {
     constructor(props) {
@@ -31,24 +31,14 @@ class ContactMeDisplayer extends React.Component {
 
         if(this.state.name === '' || this.state.subject === '' || this.state.comment === '') alert('One or more of the input is empty.');
 
-        
-           
-        fetch('http://localhost:3000/send', {
-            method: 'POST',
-            body: JSON.strongify(this.state),
-            headers: {
-                'Accept' : 'application/json',
-                'Content-Type' :'application/json'
-            },
-        }).then(
-            (response) => (response.json()) 
-        ).then((response) => {
-            if(response.status === 'success') {
-                alert('Message Sent.');
-            } else if(response.status === 'fail') {
-                alert('Message failed to send.');
-            }
-        })
+        axios.post('API_URI', this.state).then(
+            res => {
+                this.setState({sent: true}, alert('Message successfully sent.'));
+            }).catch(
+                () => {
+                    alert('message not sent.');
+                }
+            )
 
         alert('Your form was submitted');
         
