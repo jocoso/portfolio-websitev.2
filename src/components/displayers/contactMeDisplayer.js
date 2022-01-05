@@ -40,8 +40,6 @@ class ContactMeDisplayer extends React.Component {
         //         }
         //     )
 
-        alert('Your form was submitted');
-        
     }
     
     render() {
