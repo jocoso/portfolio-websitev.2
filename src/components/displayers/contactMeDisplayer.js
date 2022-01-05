@@ -1,5 +1,5 @@
 import React from 'react';
-import validator from 'validator';
+import axios from 'axios';
 
 class ContactMeDisplayer extends React.Component {
     constructor(props) {
@@ -33,24 +33,13 @@ class ContactMeDisplayer extends React.Component {
 
         
            
-        fetch('http://localhost:3000/send', {
-            method: 'POST',
-            body: JSON.strongify(this.state),
-            headers: {
-                'Accept' : 'application/json',
-                'Content-Type' :'application/json'
-            },
-        }).then(
-            (response) => (response.json()) 
-        ).then((response) => {
-            if(response.status === 'success') {
-                alert('Message Sent.');
-            } else if(response.status === 'fail') {
-                alert('Message failed to send.');
-            }
+        axios.post('personal-api-omega.vercel.app', this.state)
+        .then( res => {
+                this.setState({ sent: true }, this.resetForm())
+        }).catch( () => {
+        console.log('Message not sent')
         })
 
-        alert('Your form was submitted');
         
     }
     
