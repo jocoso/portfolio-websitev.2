@@ -34,6 +34,7 @@ class ContactMeDisplayer extends React.Component {
         axios.post('https://personal-api-fl9fj8zn2-jocoso.vercel.app/', this.state).then(
             res => {
                 this.setState({sent: true}, alert('Message successfully sent.'));
+                
             }).catch(
                 (err) => {
                     alert(err);
