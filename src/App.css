@@ -392,3 +392,36 @@ body{
   background-repeat: no-repeat;
   background-position: left;
 }
+
+
+/* Contact Me Form */
+.form-root {
+  padding: 2px;
+  width: 90%;
+  text-align: left;
+  margin-left: auto;
+  margin-right: auto;
+  vertical-align: top;
+}
+
+.form-label {
+  display: block;
+}
+
+.form-label input, textarea {
+  border-radius: 5px;
+  display: block;
+  margin: 10px 0 10px 0;
+  width: 100%;
+}
+
+.form-root input[type=text] {
+  font-size: 1.7vw;
+  width: inline-block;
+}
+
+.form-root textarea {
+  font-size: 1.6vh;
+  height: 20vh;
+  resize: none;
+}
