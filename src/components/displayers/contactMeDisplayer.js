@@ -18,7 +18,7 @@ class ContactMeDisplayer extends React.Component {
     }
 
     handleEmail = (event) => {
-        this.setState({email: event.target.value});
+        this.setState({subject: event.target.value});
     }
 
     handleComment = (event) => {
