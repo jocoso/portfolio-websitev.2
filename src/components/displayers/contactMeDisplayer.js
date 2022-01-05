@@ -31,7 +31,7 @@ class ContactMeDisplayer extends React.Component {
 
         if(this.state.name === '' || this.state.subject === '' || this.state.comment === '') alert('One or more of the input is empty.');
 
-        axios.post('https://personal-api-44j8caogc-jocoso.vercel.app/send', this.state).then(
+        axios.post('https://personal-api-44j8caogc-jocoso.vercel.app', this.state).then(
             res => {
                 this.setState({sent: true}, alert('Message successfully sent.'));
             }).catch(
