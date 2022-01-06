@@ -1,5 +1,6 @@
 import MenuWindow from './components/menuWindow';
 import './App.css';
+import React, { Component }  from 'react';
 
 import img from './images/joshpixel.gif'
 
