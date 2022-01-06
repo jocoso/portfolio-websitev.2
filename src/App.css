@@ -278,8 +278,8 @@ body{
 }
 
 #projects-displayer button img {
-  height: 70%;
-  width: 70%;
+  height: 5em;
+  width: 5em;
   margin: 0;
 }
 
@@ -301,6 +301,19 @@ body{
   
 }
 
+
+.project-content a {
+  display: block;
+  margin-bottom: 10px;
+  text-decoration: none;
+  color: rgb(128, 0, 53);
+}
+
+.project-content a:hover {
+  color: blue;
+}
+
+
 /* Modal */
 
 .modal-back {
@@ -315,10 +328,11 @@ body{
 } 
 
 .modal-front {
+  border: 5px solid;
+  border-radius: 7px;
   background-color: #fefefe;
   margin: 5% auto;
   padding: 10px;
-  border: 1px solid #888;
   width: 80%;
   height: 80%;
   overflow: scroll;
@@ -327,7 +341,9 @@ body{
 }
 
 .modal-front img {
-  width: 100%;
+  width: 70%;
+  margin-top: 3vw;
+  margin-bottom: 3vw;
 }
 
 @media screen and (max-width: 900px) {
