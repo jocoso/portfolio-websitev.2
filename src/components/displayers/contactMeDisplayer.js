@@ -8,6 +8,7 @@ class ContactMeDisplayer extends React.Component {
             name: '',
             subject: '',
             comment: '',
+            email: ''
         };
 
      
@@ -17,7 +18,7 @@ class ContactMeDisplayer extends React.Component {
         this.setState({name: event.target.value});
     }
 
-    handleEmail = (event) => {
+    handleSubject = (event) => {
         this.setState({subject: event.target.value});
     }
 
@@ -25,21 +26,35 @@ class ContactMeDisplayer extends React.Component {
         this.setState({comment: event.target.value});
     }
 
+    handleEmail = (event) => {
+        this.setState({email: event.target.value});
+    }
+
+    cleanForm = () => {
+        this.setState({
+            name: '',
+            subject: '',
+            comment: '',
+            email: ''
+        });
+    }
+
 
     handleSubmit = (event) => {
         event.preventDefault();
 
-        if(this.state.name === '' || this.state.subject === '' || this.state.comment === '') alert('One or more of the input is empty.');
-
-        axios.post('https://personal-api2.herokuapp.com/api/v1', this.state).then(
-            res => {
-                this.setState({sent: true}, alert('Message successfully sent.'));
-            }).catch(
-                (err) => {
-                    alert(err);
-                    // alert('message not sent.');
+        if(this.state.name === '' || this.state.subject === '' || this.state.email === ''|| this.state.comment === '') alert('One or more of the input is empty.');
+        else {
+            axios.post('https://personal-api2.herokuapp.com/api/v1', this.state).then(
+                res => {
+                    this.setState({sent: true}, this.cleanForm());
+                    alert('Thank you!');
+                }).catch(
+                    (err) => {
+                    alert('Sorry, we encountered an error in the submission.');
                 }
             )
+        }
 
     }
     
@@ -53,18 +68,24 @@ class ContactMeDisplayer extends React.Component {
                     Name:
                     <input 
                         type="text" 
-                        name={this.state.name} 
+                        value={this.state.name} 
                         onChange={this.handleName} 
+                    />
+                    Email:
+                    <input
+                        type="text"
+                        value={this.state.email}
+                        onChange={this.handleEmail} 
                     />
                     Subject:
                     <input 
                         type="text" 
-                        name={this.state.subject} 
-                        onChange={this.handleEmail} 
+                        value={this.state.subject} 
+                        onChange={this.handleSubject} 
                     />
                     Comment:
                     <textarea  
-                        name={this.state.comment} 
+                        value={this.state.comment} 
                         onChange={this.handleComment} 
                     />
                 </label>
