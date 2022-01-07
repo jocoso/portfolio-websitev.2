@@ -1,5 +1,5 @@
 import React from 'react';
-import yes from '../images/blop.png';
+import yes from '../images/blop.gif';
 import no from '../images/nope.png';
 
 // Given a list of options, displays a life bar.

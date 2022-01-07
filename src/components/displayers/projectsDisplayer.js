@@ -51,7 +51,7 @@ class ProjectsDisplayer extends React.Component {
                     title: 'Agent of Peace',
                     content: <div className="project-content"> 
                     <strong>Language:</strong> C#, Unity 
-                    <p>A small project I created and designed by me. A post-apocalyptic world healing after a traumatizing war.</p>
+                    <p>A small project created and designed by me. A post-apocalyptic world healing after a traumatizing war.</p>
                     <img src='https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/de703437-e01f-42f5-9cb5-5793767740d1/dbeskzd-df445021-5d27-48ad-aad1-b30d293c8816.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiJcL2ZcL2RlNzAzNDM3LWUwMWYtNDJmNS05Y2I1LTU3OTM3Njc3NDBkMVwvZGJlc2t6ZC1kZjQ0NTAyMS01ZDI3LTQ4YWQtYWFkMS1iMzBkMjkzYzg4MTYucG5nIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0.ixzPAsWhUu816OKHTkq6YO9F9-nbpI-wzokrGwsGfFo' />
                     <a href="https://github.com/jocoso/agent-of-peace" target="_blank"> [ Project GitHub ] </a>
                     </div>,
